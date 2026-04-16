@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keluarga - Fikrah Fathoni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <div class="logo"><a href="https://github.com/FikrahSiPemula" target="_blank"><img
+                        src="images/Github_Logo.jpg" alt="logo"></a></div>
+            <span>My Kisah</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html">Profil</a></li>
+            <li><a href="personal.html">Personal</a></li>
+            <li><a href="keluarga.html" class="active">Keluarga</a></li>
+            <li><a href="teman.html">Teman</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Informasi Keluarga</h1>
+
+        <div class="card family-layout">
+            <div class="family-info">
+                <h3>👨 Ayah</h3>
+                <p>Ayah saya adalah sosok pemberani dan pekerja keras yang saat ini bekerja sebagai karyawan
+                    swasta/wiraswasta, selalu memberikan inspirasi bagi keluarga.</p>
+                <br>
+                <h3>👩 Ibu</h3>
+                <p>Ibu saya adalah seorang pahlawan keluarga yang mengurus segala keperluan rumah tangga dengan penuh
+                    kasih sayang.</p>
+                <br>
+                <h3>👦 Abang</h3>
+                <p>Abang saya saat ini aktif bekerja dan fokus pada pengembangan kariernya di bidang profesional yang
+                    ditekuninya.</p>
+            </div>
+
+            <div class="family-photo">
+                <img src="images/keluarga_pas_gua_kecil.jpeg" alt="Foto Keluarga">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <span style="color: cyan;">Fikrah</span>. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        // Tutup menu saat link diklik
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

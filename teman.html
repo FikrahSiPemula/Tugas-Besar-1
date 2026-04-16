@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman - Fikrah Fathoni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <div class="logo"><a href="https://github.com/FikrahSiPemula" target="_blank"><img
+                        src="images/Github_Logo.jpg" alt="logo"></a></div>
+            <span>My Kisah</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html">Profil</a></li>
+            <li><a href="personal.html">Personal</a></li>
+            <li><a href="keluarga.html">Keluarga</a></li>
+            <li><a href="teman.html" class="active">Teman</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Teman Dekat</h1>
+
+        <div class="friend-grid">
+            <div class="friend-card">
+                <img src="images/alam.jpeg" alt="Foto Alam" class="friend-photo">
+                <h3>Alam</h3>
+                <p><strong>Deskripsi:</strong> Sangat pandai menggambar dan memadukan warna menjadi terlihat indah.
+                    Sangat pintar dalam bermain rubik, beliau benar-benar sangat berbakat dalam seni.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="images/dilan.jpeg" alt="Foto Dilan" class="friend-photo">
+                <h3>Dilan</h3>
+                <p><strong>Deskripsi:</strong> Satu sekolah terus dari TK hingga SMA, selalu saling mendukung satu sama
+                    lain terutama dalam hal gym. Beliau juga seorang gym trainer saya dan beliau sangat ahli dalam
+                    mengecek tarikan otot.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="images/zahir.jpeg" alt="Foto Zahir" class="friend-photo">
+                <h3>Zahir</h3>
+                <p><strong>Deskripsi:</strong> Seorang hacker profesional anonimus misterius. Paling jago kalau disuruh
+                    mencari bug yang tersembunyi. Beliau sudah berpengalaman sejak kelas 6 SD dalam dunia teknologi.</p>
+            </div>
+
+            <div class="friend-card">
+                <img src="images/epan.jpeg" alt="Foto Epan" class="friend-photo">
+                <h3>Epan</h3>
+                <p><strong>Deskripsi:</strong> Seorang pemuda yang sangat ahli geografi. Selalu bisa menemukan informasi
+                    tentang lokasi mana pun dengan cepat dan akurat. Mungkin beliau adalah penerus Eratosthenes.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <span style="color: cyan;">Fikrah</span>. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        // Tutup menu saat link diklik
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

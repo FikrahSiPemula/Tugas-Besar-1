@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigasi */
+nav {
+    background-color: #141517;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    border-bottom: 1px solid #222;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.logo img:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.15));
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+nav ul li a.active {
+    color: cyan;
+    transition: 0.3s;
+}
+nav ul li a.active:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #141517;
+        border-top: 1px solid #222;
+        margin-top: 15px;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        border-bottom: 1px solid #1e1e1e;
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    /* Main padding */
+    main {
+        padding: 30px 20px;
+    }
+
+    /* Friend grid */
+    .friend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Family layout */
+    .family-layout {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .family-photo img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Profile header */
+    .profile-header {
+        gap: 20px;
+    }
+
+    .profile-photo-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* Konten Utama */
+main {
+    flex: 1;
+    padding: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: aliceblue;
+    border-bottom: 3px solid cyan;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+/* Card Style */
+.card {
+    background-color: #141517;
+    color: aliceblue;
+    border-top: 1px solid #222;
+    border-bottom: 5px solid cyan;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-photo-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    color: #aaa;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.social-icon.instagram:hover {
+    border-color: #e1306c;
+    color: #e1306c;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(225, 48, 108, 0.75);
+}
+
+.social-icon.linkedin:hover {
+    border-color: #0a66c2;
+    color: #0a66c2;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.75);
+}
+
+/* Tabel Pendidikan */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1f2129;
+    color: aliceblue;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #1f212962;
+}
+
+/* Layout Keluarga */
+.family-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.family-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.family-photo img {
+    width: 250px;
+    height: 250px;
+    border: 3px solid cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.15));
+}
+
+/* Layout Teman */
+.friend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.friend-photo {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid cyan;
+    display: block;
+    margin: 0 auto 12px auto;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.15));
+}
+
+.friend-card {
+    background-color: #141517;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 1px solid #222;
+    border-bottom: 5px solid cyan;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+.friend-card h3 {
+    color: cyan;
+    font-weight: bold;
+}
+
+.friend-card p {
+    text-align: left; /* biar teks deskripsi tetap rata kiri */
+}
+
+/* Footer */
+footer {
+    background-color: #141517;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    font-size: 14px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Fikrah Fathoni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <div class="logo"><a href="https://github.com/FikrahSiPemula" target="_blank"><img
+                        src="images/Github_Logo.jpg" alt="logo"></a></div>
+            <span>My Kisah</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html" class="active">Profil</a></li>
+            <li><a href="personal.html">Personal</a></li>
+            <li><a href="keluarga.html">Keluarga</a></li>
+            <li><a href="teman.html">Teman</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="profile-header">
+            <a href="https://www.instagram.com/fifas.py" target="_blank" class="social-icon instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+            </a>
+
+            <div class="profile-photo-wrapper">
+                <img src="images/avatar.jpeg" alt="Foto Profil Fikrah" class="profile-photo">
+            </div>
+
+            <a href="https://www.linkedin.com/in/fikrah-fathoni-siregar" target="_blank" class="social-icon linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                </svg>
+            </a>
+        </div>
+        <h1>Profil Diri</h1>
+        <div class="card">
+            <h2>Halo, Saya Fikrah!</h2>
+            <p>Selamat datang di website my kisah sederhana saya. Saya adalah seseorang yang antusias terhadap dunia
+                teknologi, pengembangan perangkat lunak, dan selalu bersemangat untuk mempelajari hal-hal baru.</p>
+        </div>
+
+        <div class="card">
+            <h2>Pengalaman Profesional</h2>
+            <h3>QA Engineer - PT Cartenz Technology</h3>
+            <p>Memiliki pengalaman bekerja sebagai Quality Assurance (QA) Engineer di PT Cartenz Technology. Bertanggung
+                jawab dalam memastikan kualitas perangkat lunak, melakukan pengujian (testing) secara manual maupun
+                otomatis, serta mencari dan melaporkan bug untuk memastikan aplikasi berjalan dengan optimal sebelum
+                dirilis ke pengguna.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <span style="color: cyan;">Fikrah</span>. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        // Tutup menu saat link diklik
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal - Fikrah Fathoni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <div class="logo"><a href="https://github.com/FikrahSiPemula" target="_blank"><img
+                        src="images/Github_Logo.jpg" alt="logo"></a></div>
+            <span>My Kisah</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu">
+            <li><a href="index.html">Profil</a></li>
+            <li><a href="personal.html" class="active">Personal</a></li>
+            <li><a href="keluarga.html">Keluarga</a></li>
+            <li><a href="teman.html">Teman</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Informasi Personal</h1>
+
+        <div class="card">
+            <h2>Data Diri</h2>
+            <p><strong>Nama Lengkap:</strong> Fikrah Fathoni Siregar</p>
+            <p><strong>Tempat, Tanggal Lahir:</strong> Jakarta, 8 Mei 2007</p>
+            <p><strong>Alamat:</strong> Kemayoran, Jakarta Pusat</p>
+        </div>
+
+        <div class="card">
+            <h2>Hobi</h2>
+            <ul>
+                <li>📚 Belajar hal baru</li>
+                <li>🎮 Main Game</li>
+                <li>💻 Coding / Pemrograman</li>
+                <li>🎵 Mendengarkan & bermain Musik</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Riwayat Pendidikan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tingkat</th>
+                        <th>Nama Institusi Pendidikan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PAUD</td>
+                        <td>PAUD Permata Bunda</td>
+                    </tr>
+                    <tr>
+                        <td>TK</td>
+                        <td>TK Islam Al Mu'awanah</td>
+                    </tr>
+                    <tr>
+                        <td>SD</td>
+                        <td>SDN Serdang 11</td>
+                    </tr>
+                    <tr>
+                        <td>SMP</td>
+                        <td>SMPN 59 Jakarta</td>
+                    </tr>
+                    <tr>
+                        <td>SMK</td>
+                        <td>SMKN 21 Jakarta</td>
+                    </tr>
+                    <tr>
+                        <td>Perguruan Tinggi</td>
+                        <td>Politeknik Negeri Jakarta</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <span style="color: cyan;">Fikrah</span>. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        // Tutup menu saat link diklik
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
