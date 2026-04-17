@@ -165,16 +165,6 @@ nav ul li a.active:hover {
         width: 100%;
         height: auto;
     }
-
-    /* Profile header */
-    .profile-header {
-        gap: 20px;
-    }
-
-    .profile-photo-wrapper {
-        width: 110px;
-        height: 110px;
-    }
 }
 
 /* Konten Utama */
